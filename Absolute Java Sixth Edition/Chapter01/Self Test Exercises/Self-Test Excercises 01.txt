@@ -3,7 +3,7 @@ to be written to the screen. What would it cause to be written to the screen?
 
 System.out.println("Java is not a drink.");
 
-This would print: Java is not a drink.
+    This would print: Java is not a drink.
 
 2. Give a statement or statements that can be used in a Java program to write the
 following to the screen when run:
@@ -11,17 +11,43 @@ following to the screen when run:
 I like Java.
 You like tea.
 
-System.out.println("I like Java.");
-System.out.println("You like tea.");
+    System.out.println("I like Java.");
+    System.out.println("You like tea.");
 
 3. Write a complete Java program that uses System.out.println to output thefollowing to the screen when run:
 
 Hello World!
 
-public class HelloWorld
-{
-    public static void main(String[] args)
+    public class HelloWorld
     {
-        System.out.println("Hello World!");
+        public static void main(String[] args)
+        {
+            System.out.println("Hello World!");
+        }
     }
-}
+
+4. What is a compiler?
+
+    a compiler is a program that translates high-level-language programs to lower-level-language programs.
+
+5. What is a source program?
+
+    A source program is the original code that hasnt been translated into machine code.
+
+6. What is an object program?
+
+    An object program is the translated code
+
+7. What do you call a program that runs Java byte-code instructions?
+
+    A Java Virtual Machine (JVM)
+
+8. Suppose you define a class named NiceClass in a file. What name should the
+file have? 
+
+    NiceClass.java
+
+9. Suppose you compile the class NiceClass. What will be the name of the file
+with the resulting byte-code?
+
+    NiceClass.class

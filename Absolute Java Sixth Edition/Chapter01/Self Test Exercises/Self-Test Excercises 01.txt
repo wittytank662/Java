@@ -1,0 +1,27 @@
+1. If the following statement were used in a Java program, it would cause something
+to be written to the screen. What would it cause to be written to the screen?
+
+System.out.println("Java is not a drink.");
+
+This would print: Java is not a drink.
+
+2. Give a statement or statements that can be used in a Java program to write the
+following to the screen when run:
+
+I like Java.
+You like tea.
+
+System.out.println("I like Java.");
+System.out.println("You like tea.");
+
+3. Write a complete Java program that uses System.out.println to output thefollowing to the screen when run:
+
+Hello World!
+
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}

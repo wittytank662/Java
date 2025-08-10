@@ -51,3 +51,50 @@ file have?
 with the resulting byte-code?
 
     NiceClass.class
+
+10. Which of the following may be used as variable names in Java?
+
+    rate1, 1stPlayer, myprogram.java, long, TimeLimit, numberOfWindows
+
+    rate1, long, TimeLimit, and numberOfWindows can all be used as variable names.
+
+11. Can a Java program have two different variables named number and Number?
+
+    yes
+
+12. Give the declaration for two variables called feet and inches. Both variables are of type int and 
+both are to be initialized to zero in the declaration.
+
+    int feet = 0, inches = 0;
+
+13. Give the declaration for two variables called count and distance. count is of type int and is 
+initialized to zero. distance is of type double and is initialized to 1.5.
+
+    int count = 0;
+    double distance = 1.5;
+
+14. Write a Java assignment statement that will set the value of the variable distance to the value of 
+the variable time multiplied by 80. All variables are of type int.
+
+    distance = time * 80;
+
+15. Write a Java assignment statement that will set the value of the variable
+interest to the value of the variable balance multiplied by the value of the
+variable rate. The variables are of type double.
+
+    interest = balance * rate;
+
+16. What is the output produced by the following lines of program code? 
+
+    char a, b;
+    a = 'b';
+    System.out.println(a);
+    b = 'c';
+    System.out.println(b);
+    a = b;
+    System.out.println(a);
+
+    the output would be:
+    b
+    c
+    c

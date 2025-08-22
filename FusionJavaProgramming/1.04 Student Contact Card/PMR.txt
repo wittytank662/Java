@@ -1,0 +1,5 @@
+Post Mortem Review - Student Info Card
+
+This was a fun beginning assingment that helped me get comfortable in writing basic java.
+
+I cant wait to learn more Java and do more complex assignments.

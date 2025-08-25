@@ -4,7 +4,7 @@
  * multiplication, division, and modulus operations on integers and
  * decimals.
  * 
- * This was not coded by me, this was given to me through the course i am following.
+ * This was not coded by me, this was a template given to me through the course i am following.
  *  
  * @ author APCS Team
  * @ version 2020

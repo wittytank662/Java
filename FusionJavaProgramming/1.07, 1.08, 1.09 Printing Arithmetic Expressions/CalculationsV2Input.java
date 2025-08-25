@@ -1,6 +1,6 @@
 import java.util.Scanner; // Import Scanner
 
-public class CalculationsV2 {
+public class CalculationsV2Input {
     public static void main(String[] args) {
         // Choosing Numbers
         try (Scanner sc = new Scanner(System.in)) {

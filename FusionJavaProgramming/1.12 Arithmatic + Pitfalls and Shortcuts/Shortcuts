@@ -1,0 +1,9 @@
+Useful Shortcuts:
+
+    n = n + 1       x = x * z       t = t + 0.039
+    a = a - 1       b = b / 15      d = d - q
+
+    Shorthand Versions:
+
+    n++             x *= z          t += 0.039
+    a--             b /= 15         d -= q

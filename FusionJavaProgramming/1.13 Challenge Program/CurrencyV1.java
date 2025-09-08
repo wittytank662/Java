@@ -23,7 +23,7 @@ public class CurrencyV1
         //Declare and initialize local variables
         double startingUsDollars = 6500.00;		// starting US Dollars
 
-		System.out.println("Starting US dollars: "+ startingUsDollars);
+		System.out.println("Starting US dollars: 		" + startingUsDollars);
 		
         double pesosSpent = 7210.25;            								// Mexican Pesos spent
         double pesoExchangeRate = 18.78218;     								// 1 US dollar = 18.78218 Pesos
@@ -31,9 +31,9 @@ public class CurrencyV1
         double dollarsAfterMexico = startingUsDollars - dollarsSpentInMexico;   // US dollars remaining after Mexico
 
 		System.out.println("Mexico:");
-		System.out.println("	Pesos spent: " + pesosSpent);
-		System.out.println("	US dollars equivalent: " + dollarsSpentInMexico);
-		System.out.println("	US dollars remaining: " + dollarsAfterMexico);
+		System.out.println("	Pesos spent:		" + pesosSpent);
+		System.out.println("	US dollars equivalent:	" + dollarsSpentInMexico);
+		System.out.println("	US dollars remaining:	" + dollarsAfterMexico);
 		
         //remaining variables below here
 		// Conversion
@@ -45,9 +45,9 @@ public class CurrencyV1
 		double dollarsAfterItaly = dollarsAfterMexico - dollarsSpentInItaly;	// US dollars remaining after Italy
 
 		System.out.println("Italy:");
-		System.out.println("	Euros spent: " + eurosSpent);
-		System.out.println("	US dollars equivalent: " + dollarsSpentInItaly);
-		System.out.println("	US dollars remaining: " + dollarsAfterItaly);
+		System.out.println("	Euros spent:		" + eurosSpent);
+		System.out.println("	US dollars equivalent:	" + dollarsSpentInItaly);
+		System.out.println("	US dollars remaining:	" + dollarsAfterItaly);
 
 		double cadSpent = 683.20;												// CAD spent
 		double cadExchangeRate = 1.377230; 										// 1 US dollar = 1.377230 CAD
@@ -55,11 +55,11 @@ public class CurrencyV1
 		double dollarsAfterCanada = dollarsAfterItaly - dollarsSpentInCanada;	// US dollars remaining after Canada
 
 		System.out.println("Canada:");
-		System.out.println("	Canadian dollars spent: " + cadSpent);
-		System.out.println("	US dollars equivalent: " + dollarsSpentInCanada);
-		System.out.println("	US dollars remaining: " + dollarsAfterCanada);
+		System.out.println("	Canadian dollars spent:	" + cadSpent);
+		System.out.println("	US dollars equivalent:	" + dollarsSpentInCanada);
+		System.out.println("	US dollars remaining:	" + dollarsAfterCanada);
 		System.out.println("====================================================");
-		System.out.println("Remaining US dollars: "+ dollarsAfterCanada);
+		System.out.println("Remaining US dollars:		"+ dollarsAfterCanada);
 
 
 
@@ -73,8 +73,8 @@ public class CurrencyV1
 		//Calculations for Souvenir #1
 		int costItem1 = 12;  						//cost per item of first souvenir
 		int budget1 = 100;   						//budget for first item
-		int totalItems1 = 8; 		//how many items can be purchased
-		int fundsRemaining1 = (budget1 - (costItem1 * totalItems1));  //how much of the budget is left
+		int totalItems1 = budget1 / costItem1; 		//how many items can be purchased
+		int fundsRemaining1 = budget1 % costItem1;  //how much of the budget is left
 
 		System.out.println("Item 1");
 		System.out.println("   Cost per item: $" + costItem1 );
@@ -86,8 +86,8 @@ public class CurrencyV1
 		//Calculations for Souvenir #2
 		double costItem2 = 29.99;  						//cost per item of second souvenir
 		int budget2 = 500;   							//budget for second item
-		int totalItems2 = 16; 	//how many items can be purchased
-		double fundsRemaining2 = (budget2 - (costItem2 * totalItems2));  	//how much of the budget is left
+		int totalItems2 = (int)(budget2 / costItem2); 	//how many items can be purchased
+		double fundsRemaining2 = budget2 % costItem2;  	//how much of the budget is left
 
 		System.out.println("Item 2");
 		System.out.println("   Cost per item: $" + costItem2 );

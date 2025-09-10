@@ -8,12 +8,12 @@ public class PyTheorem {
         // Triangle 1
         int a = (int)(Math.random() * (23 - 5 + 1)) + 5;
         int b = (int)(Math.random() * (23 - 5 + 1)) + 5;
-        double c = (Math.sqrt((a * a) + (b * b)));
+        double c = (Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)));
 
         // Triangle 2
         int d = (int)(Math.random() * (23 - 5 + 1)) + 5;
         int e = (int)(Math.random() * (23 - 5 + 1)) + 5;
-        double f = (Math.sqrt((d * d) + (e * e)));
+        double f = (Math.sqrt(Math.pow(d, 2) + Math.pow(e, 2)));
 
         // Triangle 1
         System.out.print("Triangle 1   ");

@@ -1,0 +1,11 @@
+Calling Methods:
+    1. Method Signature - The method declaration that includes the name of the method and the parameters.
+
+    2. Return Type - Methods can be either void or return types. A void function will not send back information to where the funciton was called.
+        Return types will return information back to the funciton call based on the type indicated.
+    
+    3. Parameters - These are the inputs required by the method in order to accomplish the task.
+
+    4. Arguments - These are the values that are sent as part of the function call.
+
+    5. Function Call - We use the name of the method to call on the funciton. We must match arguments with the intended parameter types.

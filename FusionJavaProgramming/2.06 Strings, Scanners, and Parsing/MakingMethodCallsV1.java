@@ -4,7 +4,7 @@
  * APCS Team 2020 (Edited by: )
  *
  */ 
- public class MakingMethodCalls
+ public class MakingMethodCallsV1
 
 {
     public static void addTheseTwo()

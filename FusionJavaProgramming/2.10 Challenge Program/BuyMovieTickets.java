@@ -51,14 +51,58 @@ public class BuyMovieTickets {
             System.out.println(orderNum);
             System.out.println();
 
+            // Print first initial and last name
+            System.out.println(" " + fullName.substring(0, 1) + ". " + (fullName.substring(spaceIndex + 1)));
 
-            System.out.println(fullName.substring(0, 1) + ". " + (fullName.substring(spaceIndex + 1)));
+            // Print debit card with only last four digits showing
 
-        
+            // Get the last 4 numbers of debit card
+            String temp = debitCard.replace("-", "");
+            String last4digits = temp.substring(8);
 
+            // Print
+            System.out.println(" Account: #####-###-" + last4digits);
+
+            // Print Movie
+            System.out.println(" Movie: " + movie);
+
+            // Print ticket Amount
+            System.out.println(" Number of Tickets: " + ticketAmt);
+
+            // Convert ticket price into a double
+            int decimalPoint = ticketPrice.indexOf(".");
+            String fullNum = ticketPrice.substring(1, decimalPoint);
+            String decimals = ticketPrice.substring((decimalPoint + 1));
+
+            int num1 = Integer.parseInt(fullNum);
+            int num2 = Integer.parseInt(decimals);
+
+            double decimal = (double)num2 * 0.01;
+            double price = (double)num1 + decimal;
+
+            //Print price
+            System.out.println(" Ticket Price: $" + price);
+            System.out.println();
+            
+            // Print debited
+            int ticketAmount = Integer.parseInt(ticketAmt);
+            double fullPrice = price * ticketAmount;
+            System.out.println(" $" + fullPrice + " will be debited to your account.");
+            System.out.println();
+
+            System.out.println(" Thank you. Enjoy your movie tonight.");
+
+            System.out.println("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+            System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
+            
+
+
+
+            /*
             System.out.println("Name: " + fullName + "    Date: " + date + "    Movie: " + movie);
             System.out.println("Ticket Amount: " + ticketAmt + "    Ticket Price: " + ticketPrice);
             System.out.println("Debit Card: " + debitCard + "    Card PIN: " + debitPin);
+            */
 
         }
 

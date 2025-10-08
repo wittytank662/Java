@@ -35,5 +35,9 @@ public class ComparingStrings {
         String str1 = "Apple";
         String str2 = "App";
         System.out.println(str1.compareTo(str2));
+
+        String str3 = "jumping";
+        String str4 = "jack";
+        System.out.println(str3.compareTo(str4));
     }
 }

@@ -14,6 +14,16 @@ public class Conditianals{
 
                     *Primitive data types
 
+                    Logic Operators:
+                        !   - NOT
+                        &&  - AND
+                        ||  - OR
+
+                    *De Morgan's Laws
+                        1. !(A && B) = !A || !B
+
+                        2. !(A || B) = !A && !B
+
             Conditional Statements
 
                 if-else:

@@ -8,6 +8,12 @@ public class scannerTest {
         String userName = myObj.nextLine();
         System.out.println("Username is: " + userName);
 
+        System.out.print("Please enter your gender (M/F): ");
+        String gender = (myObj.nextLine()).toUpperCase();
+
+        System.out.println(gender);
+
+
         myObj.close();
         }
     }

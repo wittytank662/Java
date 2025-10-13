@@ -12,8 +12,20 @@ public class TDEE {
         System.out.print("Please enter your BMR: ");
         String bmr = in.nextLine();
 
+        // parse bmr for double for BMR - Used https://www.geeksforgeeks.org/java/double-parsedouble-method-in-java-with-examples/# to review
+        double BMR = Double.parseDouble(bmr);
+
+
         System.out.print("Please enter your gender (M/F): ");
         String gender = (in.nextLine()).toUpperCase();
+
+        // Declare isMale
+        boolean isMale = false;
+
+        // Get isMale
+        if(gender.equals("M")){
+            isMale = true;
+        }
 
         System.out.println();
 
@@ -31,14 +43,46 @@ public class TDEE {
         String activityLevelIn = in.next();
         String activityLevel = activityLevelIn.toUpperCase();
 
-        if(gender.equals("M")){
-            boolean isMale = true;
+
+        // Declare activityFactor
+        double activityFactor = 0.0;
+
+        // Assign activity factor based on activity level
+        if((activityLevel.equals("A"))) {
+            activityFactor = 1.0;
+        } else if((activityLevel.equals("B"))) {
+            activityFactor = 1.3;
+        } else if((activityLevel.equals("C")) && (isMale == true)) {
+            activityFactor = 1.6;
+        } else if((activityLevel.equals("C")) && (isMale == false)) {
+            activityFactor = 1.5;
+        } else if((activityLevel.equals("D")) && (isMale == true)) {
+            activityFactor = 1.7;
+        } else if((activityLevel.equals("D")) && (isMale == false)) {
+            activityFactor = 1.6;
+        } else if((activityLevel.equals("E")) && (isMale == true)) {
+            activityFactor = 2.1;
+        } else if((activityLevel.equals("E")) && (isMale == false)) {
+            activityFactor = 1.9;
+        } else if((activityLevel.equals("F")) && (isMale == true)) {
+            activityFactor = 2.4;
+        } else if((activityLevel.equals("F")) && (isMale == false)) {
+            activityFactor = 2.2;
         }
 
-        if(activityLevel == "A") {
-            double activityFactor = 1.0;
-        }
+        // Calculate TDEE
+        // TDEE = BMR * activityFactor
+        double TDEE = (BMR * activityFactor);
+        
 
+        // Print output
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Your results:");
+        System.out.println("Name: " + name + "                Gender: " + gender);
+        System.out.println("BMR: " + BMR + " calories           Activity Factor: " + activityFactor);
+        System.out.println("TDEE: " + TDEE + " calories");
 
 
     }

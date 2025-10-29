@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class ForLoops {
     public static void main(String[] args) {
         /*
@@ -35,8 +37,15 @@ public class ForLoops {
                             }
                         }
 
+
+
          */
-}
-         
+
+        Random rng = new Random();
+
+        rng.nextInt(5);
+        
+        }
+
     }
 }

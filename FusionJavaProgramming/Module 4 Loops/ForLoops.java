@@ -44,8 +44,7 @@ public class ForLoops {
         Random rng = new Random();
 
         rng.nextInt(5);
-        
+
         }
 
     }
-}

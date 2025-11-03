@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
 
+
 public class SecretPasscode {
     public static void main(String[] args) throws IOException {
     
@@ -16,7 +17,6 @@ public class SecretPasscode {
         double passwordLen = 0;
 
         Random passwordChar = new Random();
-
         Random charLimit = new Random();
 
         // Initialize Scanner

@@ -4,16 +4,15 @@ import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class SecretPasscode {
     public static void main(String[] args) throws IOException {
-    
+
         // Intro text
         System.out.println("**********************************************************");
         System.out.println("Welcome to a simple password generator.");
         System.out.println("The password will include lowercase, uppercase, & numbers.");
 
-        // Initializing
+        // Initializing variables
         String password = "";
         String temp = "";
         String len = "temp";
@@ -27,42 +26,74 @@ public class SecretPasscode {
         // Initialize Scanner
         Scanner input = new Scanner(System.in);
 
-        // Initialize PrintWriter
-        PrintWriter outFile = new PrintWriter(new File("passwords.txt"));
+        // Create/overwrite the file
+        File file = new File("passwords.txt");
+        PrintWriter outFile = new PrintWriter(file);
 
-        // Check if password is long enough
-        while(passwordLen < passwordMinLen) {
-            System.out.println("Enter a password length (6 or more)");
-            len = input.nextLine();
-            passwordLen = Integer.parseInt(len);
+        boolean keepGoing = true;
 
-            if (passwordLen < passwordMinLen) {
-                System.out.println("    Password length too short. Please try again.");
+        while (keepGoing) {
+
+            // Get password length
+            passwordLen = 0;
+            while (passwordLen < passwordMinLen) {
+                System.out.print("Enter a password length (6 or more): ");
+                len = input.nextLine();
+                try {
+                    passwordLen = Integer.parseInt(len);
+                } catch (NumberFormatException e) {
+                    passwordLen = 0;
+                }
+
+                if (passwordLen < passwordMinLen) {
+                    System.out.println("    Password length too short. Please try again.");
+                }
+            }
+
+            // Create password
+            password = "";
+            for (int i = 0; i < passwordLen; i++) {
+                int rangeChoice = charLimit.nextInt(2);
+                int randNum;
+                if (rangeChoice == 0) {
+                    randNum = passwordChar.nextInt(90 - 48 + 1) + 48; // 48–90
+                } else {
+                    randNum = passwordChar.nextInt(122 - 97 + 1) + 97; // 97–122
+                }
+                char tempChar = (char) randNum;
+                temp = Character.toString(tempChar);
+                password = temp + password;
+            }
+
+            // Save password to file
+            outFile.println(password);
+
+            System.out.println("\nA password has been written to the text file");
+
+            // Ask if user wants another password
+            System.out.print("Would you like to generate another password? Y/N ");
+            String choice = input.nextLine();
+            if (!choice.equalsIgnoreCase("y")) {
+                keepGoing = false;
             }
         }
 
-        // Create password
-        for(int i = 0 ; i != passwordLen ; i++) {
-
-            int rangeChoice = charLimit.nextInt(2);
-
-            int randNum;
-            if (rangeChoice == 0) {
-                randNum = passwordChar.nextInt(90 - 46 + 1) + 48;
-            } else {
-                randNum = passwordChar.nextInt(122 - 97 + 1) + 97;
-            }
-
-            char tempChar = (char)randNum;
-
-            temp = Character.toString(tempChar);
-            password = temp + password;
-        }
-        outFile.println(password);
+        // Close the file after writing all passwords
         outFile.close();
 
-        System.out.println("Generated password: " + password);
-        System.out.println("password saved to passwords.txt");
+        // End message
+        System.out.println("\nThank you for using the Pass Code Generator.\n");
+        System.out.println("Here are your randomly generated codes:");
+
+        // Print passwords
+        Scanner readFile = new Scanner(file);
+        int count = 1;
+        while (readFile.hasNextLine()) {
+            String savedPassword = readFile.nextLine();
+            System.out.println(count + ".\t" + savedPassword);
+            count++;
+        }
+        readFile.close();
 
         input.close();
     }

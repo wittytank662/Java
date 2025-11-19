@@ -18,6 +18,17 @@ public class Student {
 
     //Methods - Will give our class functionality and the ability to access/mutate properties
 
+        //Static Method - GPA Calculator
+    public static double GpaCalculator(double[] grades){
+        double sum = 0;
+
+        for(int i = 0; i < grades.length; i++){
+            sum += grades[i];
+        }
+        return sum/grades.length;
+    }
+
+
         //Accessors/Mutators also known as (getters/setters)
         //Two types of methods: void vs return
             //Return type methods must include a return statement and must indicate what type of data will be returned

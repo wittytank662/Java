@@ -6,8 +6,13 @@ public class CarsV8 {
     private int accelSpeed;
     private int brakeSpeed;
 
-    public CarsV8() {
-        
+    public CarsV8(String _brand, String _model, String _engineMake) {
+        brand = _brand;
+        model = _model;
+        engineMake = _engineMake;
+        topSpeed = 0;
+        accelSpeed = 0;
+        brakeSpeed = 0;
     }
 
     public CarsV8(String _brand, String _model, String _engineMake, int _topSpeed, int _accelSpeed, int _brakeSpeed) {
@@ -73,6 +78,14 @@ public class CarsV8 {
 
     public int getTopSpeed() {
         return topSpeed;
+    }
+
+    public int getAccelSpeed() {
+        return accelSpeed;
+    }
+
+    public int getBrakeSpeed() {
+        return brakeSpeed;
     }
 
     public void engineSwap(String engineMake) {

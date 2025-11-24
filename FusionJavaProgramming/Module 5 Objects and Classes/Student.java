@@ -15,6 +15,9 @@ public class Student {
         grade = _grade;
         gpa = 0;
     }
+    //Overloaded Methods - have the same name but there is a difference in parameteres
+        //The parameters may be a different number of parameters, different data type, or a different order
+        
 
     //Methods - Will give our class functionality and the ability to access/mutate properties
 

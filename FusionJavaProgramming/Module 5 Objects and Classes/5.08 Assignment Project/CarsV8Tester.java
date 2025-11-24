@@ -5,7 +5,7 @@ public class CarsV8Tester {
         CarsV8 porsche911 = new CarsV8("Porsche", "911 Turbo", "Flat 6", 205, 30, 35);
         CarsV8 ferrari812Superfast = new CarsV8("Ferrari", "812 Superfast", "V12", 211, 40, 45);
         CarsV8 fordMustangGT = new CarsV8("Ford", "Mustang GT", "V8", 155, 45, 50);
-        CarsV8 projectCar = new CarsV8();
+        CarsV8 projectCar = new CarsV8("Toyota", "Supra", "I4");
 
         // Initiate speed
         int porscheSpeed = 20;
@@ -14,14 +14,15 @@ public class CarsV8Tester {
         int projectCarSpeed = 0;
         
         // Test methods
+        //Porsche
         porscheSpeed = porsche911.brake(porscheSpeed);
 
         System.out.println("The Porsche braked and slowed down to: " + porscheSpeed + "mph");
-
+        //Ferrari
         ferrariSpeed = ferrari812Superfast.accelerate(ferrariSpeed);
 
         System.out.println("The Ferrari accelerated to: " + ferrariSpeed + "mph");
-
+        //Mustang
         fordMustangGT.changeTopSpeed(160);
 
         mustangSpeed = fordMustangGT.accelerate(mustangSpeed);
@@ -29,19 +30,16 @@ public class CarsV8Tester {
         fordMustangGT.engineSwap("V6");
 
         // Build project car
-        projectCar.setModel("Supra");
-        projectCar.setBrand("Toyota");
-        projectCar.engineSwap("I4");
         projectCar.changeTopSpeed(155);
         projectCar.setAccelSpeed(50);
         projectCar.setBrakeSpeed(45);
 
 
-
+        //Mustang
         mustangSpeed = fordMustangGT.accelerate();
 
         System.out.println("Mustang speed: " + mustangSpeed);
-
+        //Ferrari
         ferrariSpeed = ferrari812Superfast.brake();
 
         System.out.println("Ferrari speed: " + ferrariSpeed);

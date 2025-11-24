@@ -1,6 +1,6 @@
 public class CarsTesterV3 {
     public static void main(String[] args) {
-        CarsV3 porsche911 = new CarsV3("Porsche", "911");
+        CarsV8 porsche911 = new CarsV8("Porsche", "911");
 
         porsche911.accelerate();
 

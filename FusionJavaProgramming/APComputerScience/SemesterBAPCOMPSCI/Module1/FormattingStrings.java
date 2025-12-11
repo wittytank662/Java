@@ -32,7 +32,7 @@ public class FormattingStrings {
                         A whole number that represents the number of spaces the output takes up. If additional characters are 
                         needed the extra spaces will be aded to the left, unless you see the '-' flag
                     4. [.precision]
-                        A decimal followed bya  number that represents the number of decimal numbers you want the output to have
+                        A decimal followed by a number that represents the number of decimal numbers you want the output to have
                     
                     5. conversion
                         a. s or S   - the conversion for a string. If capital S then the string will be capitalized
@@ -47,7 +47,7 @@ public class FormattingStrings {
         str = String.format("%1$s %s" ,"Hello", "World");
         System.out.println(str);
 
-        str = String.format("2$,3.2rf %1$-10s", "meters", 1260.3256);
+        str = String.format("%2$,3.2f %1$-10s squared", "meters", 1260.3256);
         System.out.println(str);
     }
 }

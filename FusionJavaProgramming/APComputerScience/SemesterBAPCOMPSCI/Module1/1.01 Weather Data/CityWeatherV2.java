@@ -72,9 +72,13 @@ public class CityWeatherV2 {
         
 
     // method to calculate temperature in Celsius (current index of temperature array passed as a parameter) - to be completed in 6.02
-    
+    public void convertTempToCelsius(int index) {
+        temperatures[index] = (temperatures[index] - 32) * 5 / 9.0;
+    }
     
     // method to calculate precipitation in centimeters (current index of precipitation array passed as a parameter) - to be completed in 6.02
-
+    public void convertPrecipToCentimeters(int index) {
+        precipitations[index] = precipitations[index] * 2.54;
+    }
 
 }

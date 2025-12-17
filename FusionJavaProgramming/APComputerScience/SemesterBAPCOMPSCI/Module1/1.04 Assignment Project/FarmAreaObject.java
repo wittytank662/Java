@@ -10,7 +10,11 @@ public class FarmAreaObject {
         farmName = name;
         this.farmLength = farmLength;
         this.farmWidth = farmWidth;
+        farmArea = farmLength * farmWidth;
+        farmPerimeter = (farmLength * 2) + (farmWidth * 2);
     }
+
+    // Methods
 
     // Calculate farm area
 
@@ -40,6 +44,14 @@ public class FarmAreaObject {
         return farmWidth;
     }
 
+    public double getFarmArea() {
+        return farmArea;
+    }
+
+    public double getFarmPermieter() {
+        return farmPerimeter;
+    }
+
     // Setters
 
     public void setFarmName(String name) {
@@ -54,4 +66,8 @@ public class FarmAreaObject {
         farmWidth = width;
     }
 
+    // toString
+    public String farmToString() {
+        return String.format("%-12s %8.2f %8.2f %10.2f %12.2f", farmName, farmLength, farmWidth, getFarmArea(), getFarmPermieter());
+    }
 }

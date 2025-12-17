@@ -67,9 +67,6 @@ public class CityWeatherV2 {
         }
         return temp;
     }
- 
-        
-        
 
     // method to calculate temperature in Celsius (current index of temperature array passed as a parameter) - to be completed in 6.02
     public void convertTempToCelsius(int index) {

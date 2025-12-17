@@ -11,9 +11,9 @@ public class CityWeatherTesterV2
    
     
     // method to print results (formatting output will be done in 6.02)
-
-    public static void printWeatherData(String city, String state, String[] month, double[] temperature, double[] precipitation, String tempLabel, String precipLabel, double avgTemp, double totalPrecip) {
     
+    public static void printWeatherData(String city, String state, String[] month, double[] temperature, double[] precipitation, String tempLabel, String precipLabel, double avgTemp, double totalPrecip) {
+
         //Output: display table of weather data including average and total
         System.out.println();
         System.out.println("           Weather Data");
@@ -47,7 +47,7 @@ public class CityWeatherTesterV2
         double [] precipitation ={3.1, 2.7, 3.8, 2.5, 3.3, 5.7, 5.2, 6.1, 6.6, 4.5, 3.0, 2.7};     //complete initialization of precipitation array
     
         String tempLabel = "F";    //initialize to F
-        String precipLabel = "in."; //initialize to in
+        String precipLabel = "in"; //initialize to in
         
         //instantiate CityWeatherV2 object 
         
@@ -63,9 +63,21 @@ public class CityWeatherTesterV2
         System.out.println("");
 
         //conditions & method call to convert temp, if needed - to be completed in 6.02
+        if (tempLabel.equals("C")) {
+            tempLabel = "C";
+            for (int i = 0; i < temperature.length; i++) {
+                weather.convertTempToCelsius(i);
+            }
+        }
 
         //conditions & method call to convert prec, if needed - to be completed in 6.02
-        
+        if (precipLabel.equals("CM")) {
+            precipLabel = "cm";
+            for (int i = 0; i < precipitation.length; i++) {
+                weather.convertPrecipToCentimeters(i);
+            }
+        }
+
         //method call to calculate the average temperature
         double avgTemp = weather.averageTemp();
         

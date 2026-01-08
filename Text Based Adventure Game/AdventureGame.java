@@ -17,10 +17,10 @@ public class AdventureGame {
 
         AdventureGameCharacter player = new AdventureGameCharacter("Sam", 20, 100, 0, 0, map);
 
-        Boolean loop = true;
+        Boolean running = true;
         String input;
 
-        while(loop == true) {
+        while(running == true) {
             System.out.print("Do you want to go N-S-E-W? or check location C?");
             input = myObj.nextLine();
 

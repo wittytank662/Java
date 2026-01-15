@@ -90,8 +90,9 @@ public class Hurricane
 
    public String toString() {
    
-      // complete the toString method using String.format()  
-      return "";
+      // complete the toString method using String.format() 
+
+      return String.format("%-10d %-16s %-12d %-15d %-10.2f", year, name, cat, pressure, windspeed);
    }
     
 }

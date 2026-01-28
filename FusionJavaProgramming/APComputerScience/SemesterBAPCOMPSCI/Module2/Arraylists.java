@@ -56,5 +56,7 @@ public class Arraylists{
             System.out.println(s);
         }
 
+        int[] x = new int[5];
+
     }
 }

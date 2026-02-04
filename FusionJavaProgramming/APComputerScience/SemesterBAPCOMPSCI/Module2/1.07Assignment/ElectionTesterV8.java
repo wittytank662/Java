@@ -74,7 +74,7 @@ public class ElectionTesterV8 {
         System.out.println("Candidate        Recieved          Votes");
         System.out.println("==========================================");
 
-        for(int index1 = 0; index1 < 4; index1++) {
+        for(int index1 = 0; index1 < 6; index1++) {
             if (index1 != 0) {
                 System.out.println();
                 System.out.println("                  Votes         % of Total");
@@ -108,7 +108,7 @@ public class ElectionTesterV8 {
             } else if (index1 == 3) {
                 addCandidate(candidates, 3, "Peter Parker", 823);
             } else if (index1 == 4) {
-                addCandidateBefore(candidates, , name, totVotes);
+                addCandidateBefore(candidates, candidates.get(3), "Black Widow", 291);
             }
         }
         

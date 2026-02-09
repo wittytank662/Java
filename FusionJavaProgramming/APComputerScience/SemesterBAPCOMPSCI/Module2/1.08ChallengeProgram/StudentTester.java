@@ -38,13 +38,13 @@ public class StudentTester {
         scores5[3] = 89;
         scores5[4] = 86;
 
-        ArrayList<Student> students = new ArrayList<Student>();
+        ArrayList<Student2> students = new ArrayList<Student2>();
 
-        students.add(new Student("James", "Baker", scores1));
-        students.add(new Student("John", "Doe", scores2));
-        students.add(new Student("Joe", "Miller", scores3));
-        students.add(new Student("Frank", "Burger", scores4));
-        students.add(new Student("Blake", "Smith", scores5));
+        students.add(new Student2("James", "Baker", scores1));
+        students.add(new Student2("John", "Doe", scores2));
+        students.add(new Student2("Joe", "Miller", scores3));
+        students.add(new Student2("Frank", "Burger", scores4));
+        students.add(new Student2("Blake", "Smith", scores5));
 
         System.out.println("Student name     Q1     Q2     Q3     Q4     Q5");
         System.out.println("-------------------------------------------------");

@@ -72,6 +72,29 @@ public class ElectionTesterV7 {
         System.out.println("<< Added candidate " + name + " with " + votes + " votes to position " + pos + ". >>");
 
     }
+
+    public static void delCandidate(Candidate[] candidates, int pos) {
+        candidates[pos - 1] = null;
+
+        System.out.println("<< Deleted position " + pos + " >>");
+    }
+
+    public static void delCandidateName(Candidate[] candidates, String name) {
+        int pos = -1;
+        for(int index = 0; index < candidates.length; index++) {
+            if(candidates[index] != null) {
+                if(candidates[index].getName().equals(name)) {
+                    pos = index;
+                    break;
+                }
+            }
+            
+        }
+
+        candidates[pos] = null;
+
+        System.out.println("<< Deleted " + name + " >>");
+    }
     public static void main(String[] args) {
         
         Candidate[] candidates = new Candidate[7];
@@ -94,7 +117,7 @@ public class ElectionTesterV7 {
         System.out.println("Candidate        Recieved          Votes");
         System.out.println("==========================================");
 
-        for(int index1 = 0; index1 < 6; index1++) {
+        for(int index1 = 0; index1 < 8; index1++) {
             if (index1 != 0) {
                 System.out.println();
                 System.out.println("                  Votes         % of Total");
@@ -133,6 +156,10 @@ public class ElectionTesterV7 {
                 addCandidate(candidates, 3, "Peter Parker", 823);
             } else if (index1 == 4) {
                 addCandidateBefore(candidates, candidates[3], "Black Widow", 291);
+            } else if (index1 == 5) {
+                delCandidate(candidates, 4);
+            } else if (index1 == 6) {
+                delCandidateName(candidates, "Henry Pym");
             }
         }
     }

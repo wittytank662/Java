@@ -1,4 +1,3 @@
-import java.util.Arrays;
 
 public class Student {
     
@@ -30,6 +29,6 @@ public class Student {
     }
 
     public String toString() {
-        return String.format("%-1s %-14s %-18s", firstName, lastName, Arrays.toString(scores));
+        return String.format("%-16s %-6d %-6d %-6d %-6d %-6d", firstName + " " + lastName, scores[0], scores[1], scores[2], scores[3], scores[4]);
     }
 }

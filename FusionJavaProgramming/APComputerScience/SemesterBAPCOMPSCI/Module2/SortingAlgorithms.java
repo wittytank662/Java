@@ -10,6 +10,10 @@ public class SortingAlgorithms {
                     *Each time we look back we will continue to either swap or stop(inserting the value in the correct spot)
                     *Each iteration will then move the key value to the next one and repeat
 
+                2. Selection Sort:
+                    *Selection sort will select one element at a time placing it in the correct location
+                    *Selection sort will traverse finding the "smallest" or "largest" value one at a time
+                    *Each itertion will continuously sort the array
         */
 
         ArrayList<Student2> classroom = new ArrayList<Student2>();
@@ -22,10 +26,12 @@ public class SortingAlgorithms {
         classroom.add(new Student2("Sandra", 1));
 
         printArrayList(classroom);
-        insertionSortByName(classroom);
+        //insertionSortByName(classroom);
+        selectionSortByName(classroom);
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         printArrayList(classroom);
-        insertionSortByName(classroom);
+        //insertionSortByID(classroom);
+        selectionSortById(classroom);
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
 
@@ -42,6 +48,42 @@ public class SortingAlgorithms {
                 j--;
             }
             classroom.set(j + 1, key);
+        }
+    }
+
+    public static void selectionSortByName(ArrayList<Student2> classroom) {
+        int n = classroom.size();
+        for(int i = 0; i < n; i++){
+            int keyIndex = i;
+
+            for(int j = i + 1; j < n; j++) {
+                //Compares values in order to select the next element to go in the list
+                if(classroom.get(j).getName().compareTo(classroom.get(keyIndex).getName()) < 0) {
+                    keyIndex = j;
+                }
+            }
+            //Swap
+            Student2 tempStudent = classroom.get(i);
+            classroom.set(i, classroom.get(keyIndex));
+            classroom.set(keyIndex, tempStudent);
+        }
+    }
+
+    public static void selectionSortById(ArrayList<Student2> classroom) {
+        int n = classroom.size();
+        for(int i = 0; i < n; i++){
+            int keyIndex = i;
+
+            for(int j = i + 1; j < n; j++) {
+                //Compares values in order to select the next element to go in the list
+                if(classroom.get(j).getId() < classroom.get(keyIndex).getId()) {
+                    keyIndex = j;
+                }
+            }
+            //Swap
+            Student2 tempStudent = classroom.get(i);
+            classroom.set(i, classroom.get(keyIndex));
+            classroom.set(keyIndex, tempStudent);
         }
     }
 

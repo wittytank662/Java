@@ -6,7 +6,7 @@
  * @version 02/09/26
  *
  */
-public class MovieV2
+public class Movie
 {
     // instance variables
     private int year;
@@ -14,7 +14,7 @@ public class MovieV2
     private String studio;
 
     // Constructor for objects of class Movie
-    public MovieV2(String title, int year, String studio)
+    public Movie(String title, int year, String studio)
     {
         // initialize instance variables
         this.title = title;

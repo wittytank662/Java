@@ -1,73 +1,83 @@
-public class MovieTesterV2 {
+public class MovieTesterV3 {
     public static void printMovies(Movie[] movies) {
-        System.out.println("\n" + "============================================================");
-        System.out.printf("%-30s %4s   %-20s%n", "TITLE", "YEAR", "STUDIO");
-        System.out.println("============================================================");
+        System.out.println("\n" + "===============================================================");
+        System.out.printf("%-33s %4s   %-20s%n", "TITLE", "YEAR", "STUDIO");
+        System.out.println("===============================================================");
         for(Movie movie : movies) {
             System.out.println(movie);
         }
-        System.out.println("============================================================" + "\n");
+        System.out.println("===============================================================" + "\n");
     }
 
     public static void sortByTitle(Movie[] movies, int order) {
-        for(int i = 1; i < movies.length; i++) {
-            Movie key = movies[i];
-            int j = i - 1;
+        int n = movies.length;
+        for(int i = 0; i < n; i++) {
+            int key = i;
 
             if(order == 1) {
-                while(j >= 0 && movies[j].getTitle().compareToIgnoreCase(key.getTitle()) > 0) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getTitle().compareToIgnoreCase(movies[key].getTitle()) > 0) {
+                        key = j;
+                    }
                 }
             } else if(order == 2) {
-                while(j >= 0 && movies[j].getTitle().compareToIgnoreCase(key.getTitle()) < 0) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getTitle().compareToIgnoreCase(movies[key].getTitle()) < 0) {
+                        key = j;
+                    }
                 }
             }
-            movies[j + 1] = key;
+            Movie tempMovie = movies[i];
+            movies[i] = movies[key];
+            movies[key] = tempMovie;
         }
     }
 
     public static void sortByYear(Movie[] movies, int order) {
-        for(int i = 1; i < movies.length; i++) {
-            Movie key = movies[i];
-            int j = i -1;
+        int n = movies.length;
+        for(int i = 0; i < n; i++) {
+            int key = i;
 
             if(order == 1) {
-                while(j >= 0 && movies[j].getYear() > key.getYear()) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getYear() > movies[key].getYear()) {
+                        key = j;
+                    }
                 }
             } else if(order == 2) {
-                while(j >= 0 &&movies[j].getYear() < key.getYear()) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getYear() < movies[key].getYear()) {
+                        key = j;
+                    }
                 }
             }
-
-            movies[j + 1] = key;
+            Movie tempMovie = movies[i];
+            movies[i] = movies[key];
+            movies[key] = tempMovie;
         }
     }
 
     public static void sortByStudio(Movie[] movies, int order) {
-        for(int i = 1; i < movies.length; i++) {
-            Movie key = movies[i];
-            int j = i - 1;
+        int n = movies.length;
+        for(int i = 0; i < n; i++) {
+            int key = i;
 
             if(order == 1) {
-                while(j >= 0 && movies[j].getStudio().compareToIgnoreCase(key.getStudio()) > 0) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getStudio().compareToIgnoreCase(movies[key].getStudio()) > 0) {
+                        key = j;
+                    }
                 }
             } else if(order == 2) {
-                while(j >= 0 && movies[j].getStudio().compareToIgnoreCase(key.getStudio()) < 0) {
-                    movies[j + 1] = movies[j];
-                    j--;
+                for(int j = i + 1; j < n; j++) {
+                    if(movies[j].getStudio().compareToIgnoreCase(movies[key].getStudio()) < 0) {
+                        key = j;
+                    }
                 }
             }
-
-            movies[j + 1] = key;
+            Movie tempMovie = movies[i];
+            movies[i] = movies[key];
+            movies[key] = tempMovie;
         }
     }
 

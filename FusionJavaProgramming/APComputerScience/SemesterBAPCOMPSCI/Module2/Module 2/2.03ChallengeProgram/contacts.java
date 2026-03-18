@@ -4,6 +4,8 @@ public class contacts {
     private String birthday;
     private String phone;
     private String email;
+    private Double mins;
+    private final int minsInHour = 60;
 
     public contacts(String n, String r, String b, String p, String e) {
         name = n;

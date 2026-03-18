@@ -1,5 +1,6 @@
 public class Student2 {
     
+    public static char[] school;
     private String name;
     private int id;
 

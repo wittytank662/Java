@@ -94,6 +94,10 @@ public class contactsTester {
         System.out.println(">> Searching for email: \"nobody@nowhere.com\"");
         sequentialSearchByEmail(people, "nobody@nowhere.com");
         
+        timeConverter someObject = new timeConverter(60);
+
+
+        System.out.println(someObject.convertToHours(18.4));
 
     }
 

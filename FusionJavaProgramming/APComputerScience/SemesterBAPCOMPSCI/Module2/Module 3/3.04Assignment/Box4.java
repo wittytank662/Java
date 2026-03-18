@@ -1,39 +1,34 @@
-
 /**
  * This class defines a Box object by extending
- * Rectangle and includes height.
+ * Rectangle4 and includes height.
  *
  * @author Poly Morphism
- * @version 06/13/17
+ * @version 4
  */
 
-public class Box4 extends Rectangle4
-{
-    // instance variables
+public class Box4 extends Rectangle4 {
     private int height;
 
-    // Constructor for objects of class Box
-    public Box4(int l, int w, int h)
-    {
-        // call superclass
+    public Box4(int l, int w, int h) {
         super(l, w);
 
-        // initialize instance variables
         height = h;
     }
 
-    // Return name of Class
-    /*
-     public String getName()
-    {
-    	return "Box";
-    }
-    */
-
-    // return the height
-    public int getHeight()
-    {
+    public int getHeight() {
         return height;
     }
-}
 
+    @Override
+    public String toString() {
+        return "Box4 - " + getLength() + " X " + getWidth() + " X " + height;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Box4 other = (Box4) obj;
+        return this.getLength() == other.getLength() && this.getWidth() == other.getWidth() && this.height == other.height;
+    }
+}

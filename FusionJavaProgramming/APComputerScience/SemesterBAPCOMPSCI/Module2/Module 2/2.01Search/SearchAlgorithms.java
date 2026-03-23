@@ -20,7 +20,7 @@ public class SearchAlgorithms {
 
             Tiem Complexity:
             Sequential Search - O(n)
-            Binary Search - 
+            Binary Search - O(log n)
         */
 
                     int[] arr = {14,7,24,8,11,31,6};
